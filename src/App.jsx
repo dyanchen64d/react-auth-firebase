@@ -2,16 +2,22 @@ import Signup from './components/Signup';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from './Contexts/authContext';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import Login from './components/Login';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <div>Hello world!</div>,
+      element: <Dashboard />,
     },
     {
       path: 'signup',
       element: <Signup />,
+    },
+    {
+      path: 'login',
+      element: <Login />,
     },
   ]);
 
