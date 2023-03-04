@@ -4,12 +4,17 @@ import { AuthProvider } from './contexts/authContext';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Dashboard />,
+      element: (
+        <PrivateRoute>
+          <Dashboard />
+        </PrivateRoute>
+      ),
     },
     {
       path: 'signup',

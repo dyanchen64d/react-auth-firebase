@@ -13,10 +13,12 @@ export const AuthProvider = ({ children }) => {
   const [loading, setLoading] = useState(true);
 
   const signup = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const login = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
@@ -26,8 +28,9 @@ export const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscriber = auth.onAuthStateChanged((user) => {
+      console.log('onAuthStateChanged..', user);
+
       setCurrentUser(user);
-      console.log('user==', user);
       setLoading(false);
     });
 
