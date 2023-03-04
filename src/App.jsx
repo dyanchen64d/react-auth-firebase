@@ -1,6 +1,6 @@
 import Signup from './components/Signup';
 import { Container } from 'react-bootstrap';
-import { AuthProvider } from './Contexts/authContext';
+import { AuthProvider } from './contexts/authContext';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
