@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Dashboard from './components/Dashboard';
 import Login from './components/Login';
 import PrivateRoute from './components/PrivateRoute';
+import ForgotPassword from './components/ForgotPassword';
+import UpdateProfile from './components/UpdateProfile';
 
 function App() {
   const router = createBrowserRouter([
@@ -23,6 +25,14 @@ function App() {
     {
       path: 'login',
       element: <Login />,
+    },
+    {
+      path: 'forgot-password',
+      element: <ForgotPassword />,
+    },
+    {
+      path: 'update-profile',
+      element: <UpdateProfile />,
     },
   ]);
 
