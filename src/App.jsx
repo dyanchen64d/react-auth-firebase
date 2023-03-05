@@ -32,7 +32,11 @@ function App() {
     },
     {
       path: 'update-profile',
-      element: <UpdateProfile />,
+      element: (
+        <PrivateRoute>
+          <UpdateProfile />
+        </PrivateRoute>
+      ),
     },
   ]);
 
